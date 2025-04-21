@@ -44,11 +44,11 @@ public class Circle
         
         Console.WriteLine($"The area of the first circle is: {c1.Area():F2}");
         Console.WriteLine($"The area of the second circle is: {c2.Area():F2}");
-        Console.WriteLine($"A circle with the sum of the areas has:");
-        Console.WriteLine($"  - Radius: {sumCircle.Radius:F2}");
-        Console.WriteLine($"  - Area: {sumCircle.Area():F2}");
-        Console.WriteLine($"A circle with the difference of the areas has:");
-        Console.WriteLine($"  - Radius: {diffCircle.Radius:F2}");
-        Console.WriteLine($"  - Area: {diffCircle.Area():F2}");
+        Console.WriteLine($"A circle with the sum of both areas has a:");
+        Console.WriteLine($"  - Radius of: {sumCircle.Radius:F2}");
+        Console.WriteLine($"  - Area of: {sumCircle.Area():F2}");
+        Console.WriteLine($"A circle with the difference of the two areas has a:");
+        Console.WriteLine($"  - Radius of: {diffCircle.Radius:F2}");
+        Console.WriteLine($"  - Area of: {diffCircle.Area():F2}");
     }
 }
