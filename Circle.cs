@@ -13,11 +13,27 @@ public class Circle
         return Math.PI * (Radius * Radius);
     }
 
+    public static double operator *(Circle c1, Circle c2)
+    {
+        return c1.Area() * c2.Area();
+    }
+
     public static Circle operator +(Circle c1, Circle c2)
     {
         double newArea = c1.Area() + c2.Area();
         double newRadius = Math.Sqrt(newArea / Math.PI);;
         return new Circle(newRadius);
+    }
+
+    /*public static double operator +(Circle c1, Circle c2)
+    {
+        double newArea = c1.Area() + c2.Area();
+        return newArea;
+    }*/
+
+    public void Area(double radius)
+    {
+        Console.WriteLine(Area());
     }
     
     public static Circle operator -(Circle c1, Circle c2)
@@ -28,7 +44,7 @@ public class Circle
     }
 
 
-    public void PrintResults()
+    public static void PrintResults()
     {
         Console.WriteLine("Please enter the radius of the first circle:");
         double radius1 = double.Parse(Console.ReadLine());
