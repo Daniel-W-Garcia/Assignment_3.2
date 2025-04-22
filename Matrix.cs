@@ -2,10 +2,7 @@
 
 public class Matrix
 {
-    int[,] matrix1 = { {1, 2, 3}, {4, 5, 6} };
-    int[,] matrix2 = { {2, 4, 6}, {1, 3, 5} };
-    
-    public void IterateMatrix(int[,] matrix)
+    private void IterateMatrix(int[,] matrix)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
@@ -18,7 +15,7 @@ public class Matrix
         }
     }
     
-    public int[,] SumMatrix(int[,] matrix1, int[,] matrix2)
+    private int[,] SumMatrix(int[,] matrix1, int[,] matrix2)
     {
         int[,] sumArray = new int[matrix1.GetLength(0), matrix1.GetLength(1)];
 

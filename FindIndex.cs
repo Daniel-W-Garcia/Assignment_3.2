@@ -3,12 +3,11 @@
 public class FindIndex
 {
      double[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-     public int SearchIndex(double[] numbers, double numberToFind)
+     public int SearchIndex(double[] numberArray, double numberToFind)
      {
-          for (int i = 0; i < numbers.Length; i++)
+          for (int i = 0; i < numberArray.Length; i++)
           {
-               double currentNumber = numbers[i];
-               if (currentNumber == numberToFind)
+               if (numberArray[i] == numberToFind)
                {
                     return i;
                }
@@ -22,6 +21,25 @@ public class FindIndex
           Console.WriteLine("Please enter the number to find: ");
           double numberToFind = double.Parse(Console.ReadLine());
           
-          Console.WriteLine($"The index of your number is: {SearchIndex(numbers, numberToFind)}");
+          Console.WriteLine($"The index of your number {numberToFind}, is at position: {SearchIndex(numbers, numberToFind)}");
+     }
+
+     public int Search(int[] array, int value)
+     {
+          for (int i = 0; i < array.Length; i++)
+          {
+               if (array[i].Equals(value))// using Equals() method instead of == operator just to show it
+               {
+                    Console.WriteLine($"""
+                                       The index of {value} 
+                                       in the array: [{string.Join(", ", array)}]
+                                       is at position: {i}
+                                       """);
+                    return i;
+               }
+          }
+
+          Console.WriteLine("The value is not in the array");
+          return -1;
      }
 }
